@@ -18,7 +18,7 @@ Provide a brief description of what this module does based on the project text. 
 | **نور الهدى شحود** | Requirements & Analysis | Use Case و Activity Diagrams| [[Link](https://github.com/NourAlHudaShahood)] |
 | **مريم محمد** | Process Modeling |ERD و Class Diagrams| [[link](https://github.com/Mariam-Mohammad)] |
 | **اية المغربل** | Data Design | Sequence Diagrams | [Link](https://github.com/ayosh)k] |
-| **Student 5 (Optional)** | Interaction Design | Sequence Diagrams, Logic Flow | [Link] |
+| **هيفاء عالية حموي** | Interaction Design | Sequence Diagrams, Logic Flow | [Linkhttps://github.com/haifaahamwi] |
 | **Student 6 (Optional)** | UI/UX & Frontend | Wireframes, Interface Logic, User Stories | [Link] |
 
 ---
