@@ -1,100 +1,275 @@
-﻿# Software Requirements Specification (SRS)
-## Project: [Insert the Parent System Name, e.g., Hospital ERP System]
-## Module/Subsystem: [Insert Your Module Name, e.g., Laboratory Management, Clinical System, OR "Master Integration System" if you are the integration team]
-**Version:** 1.0  
-**Date:** [YYYY-MM-DD]
+# Software Requirements Specification (SRS)
+
+## Project:
+MediChain Laboratory Management System
+
+## Module/Subsystem:
+Revenue & Billing Module (REV-BIL)
+
+## Version:
+1.0
+
+## Date:
+2026-05-11
 
 ---
 
-## 1. Introduction
-### 1.1 Purpose
-* **Instruction:** Describe the specific purpose of this document. Who is the intended audience? If you are a subsystem team, explain how this document defines your specific module. If you are the Integration Team (Team Leaders), explain how this document governs the entire system.
+# 1. Introduction
 
-### 1.2 Scope
-* **Instruction:** Define the boundaries of your system. 
-  * What are the core goals and benefits?
-  * **Crucial:** Explicitly list what your system *will* do and what it *will NOT* do to prevent overlap with other teams.
+## 1.1 Purpose
+This document defines the requirements for the Revenue & Billing module within the MediChain Laboratory Management System. The module manages invoices, payments, insurance validation, and financial transaction tracking.
 
-### 1.3 Definitions, Acronyms, and Abbreviations
-* **Instruction:** Provide a table defining all technical terms, acronyms, or domain-specific language (e.g., medical terms, API, ERP) used in this document so all teams share a common understanding.
+## 1.2 Scope
 
-### 1.4 References
-* **Instruction:** List all referenced documents. This must include:
-  * IEEE 830 Standard.
-  * Links to shared architectural documents or API contracts agreed upon with the Integration Team.
+### The system will:
+- Create invoices
+- Process payments
+- Validate insurance coverage
+- Generate billing reports
+- Track financial transactions
+- Prevent result approval before payment
 
-### 1.5 Overview
-* **Instruction:** Briefly explain how the rest of this SRS document is organized.
+### The system will NOT:
+- Perform laboratory analysis
+- Manage radiology systems
+- Store medical imaging files
+- Replace external accounting systems
 
----
+## 1.3 Definitions, Acronyms, and Abbreviations
 
-## 2. Overall Description
-### 2.1 Product Perspective
-* **Instruction:** Explain how your software fits into the bigger picture. 
-  * **For Subsystem Teams:** State clearly that your module is a component of a larger system. How does it interact with the master database or other modules?
-  * **For the Integration Team:** Provide the high-level block diagram showing all subsystems and their connection points.
+| Term | Definition |
+|---|---|
+| SRS | Software Requirements Specification |
+| API | Application Programming Interface |
+| ERP | Enterprise Resource Planning |
+| ERD | Entity Relationship Diagram |
+| FR | Functional Requirement |
+| NFR | Non-Functional Requirement |
+| REV-BIL | Revenue & Billing Module |
 
-*   **2.1.1 System Interfaces:** [List the exact integration points and APIs your module exposes to, or consumes from, other teams].
-*   **2.1.2 User Interfaces:** [Describe the logical characteristics of your UI. Are you following a shared design system?].
-*   **2.1.3 Hardware Interfaces:** [List any required hardware, e.g., barcode scanners for labs, or state "None"].
-*   **2.1.4 Software Interfaces:** [Specify OS requirements, database dependencies, or third-party libraries].
-*   **2.1.5 Communications Interfaces:** [Define networking protocols used, e.g., HTTP/REST, WebSockets].
-*   **2.1.6 Memory & Operational Constraints:** [State minimum RAM, storage, and normal operating assumptions].
+## 1.4 References
+- IEEE 830 Standard
+- MediChain GitHub Repository
+- Shared API Contracts
 
-### 2.2 Product Functions
-* **Instruction:** Provide a high-level, bulleted summary of the major functions your software performs. Do not go into deep detail here (save it for Section 3).
-
-### 2.3 User Characteristics
-* **Instruction:** Who will use your specific module? (e.g., Lab Technicians, Doctors, System Admins). Describe their technical expertise level.
-
-### 2.4 Constraints, Assumptions, and Dependencies
-* **Instruction:** List any factors that limit your development (e.g., medical data privacy laws, reliance on another team finishing their API first, specific coding languages mandated).
+## 1.5 Overview
+This document describes the overall system requirements, interfaces, user stories, database requirements, and non-functional requirements related to the Revenue & Billing module.
 
 ---
 
-## 3. Specific Requirements (Agile Approach)
-* **Instruction:** This section translates traditional functional requirements into Agile User Stories. Every feature must be traceable to the project management board.
+# 2. Overall Description
 
-### 3.1 External Interface Requirements
-* **Instruction:** Detail the exact data formats, API endpoints, and UI layouts needed for the interfaces mentioned in section 2.1.
+## 2.1 Product Perspective
+The Revenue & Billing module is part of the MediChain Laboratory Management System. It interacts with laboratory services, patient management, and insurance systems using shared APIs and a centralized database.
 
-### 3.2 System Features & User Stories
-* **Instruction:** Organize your requirements by Feature. For each feature, write the underlying requirements as User Stories and link them to your GitHub Issues.
+### 2.1.1 System Interfaces
+- Insurance Validation API
+- Payment API
+- Shared Database
+- Laboratory Result System
 
-#### 3.2.1 Feature: [Insert Feature Name, e.g., Patient Registration]
-*   **Description:** [Briefly describe the feature].
-*   **Priority:** [High / Medium / Low].
-*   **User Stories:**
-    *   **Story 1:** As a [User Role], I want to [Action/Goal] so that [Benefit/Value]. 
-        * *Acceptance Criteria:* [List what must be true for this to be considered 'Done'].
-        * *GitHub Issue:* [Link to Issue, e.g., #12]
-    *   **Story 2:** As a [User Role], I want to [Action/Goal] so that [Benefit/Value].
-        * *Acceptance Criteria:* [List criteria].
-        * *GitHub Issue:* [Link to Issue, e.g., #13]
+### 2.1.2 User Interfaces
+The module uses responsive web interfaces following the shared MediChain design system.
 
-#### 3.2.2 Feature: [Insert Feature Name]
-*   [Repeat the structure above for all module features].
+### 2.1.3 Hardware Interfaces
+- Receipt printers
+- Barcode scanners (optional)
 
-### 3.3 Performance Requirements
-* **Instruction:** Specify quantitative limits. (e.g., "The module must return query results in under 2 seconds for up to 50 concurrent users").
+### 2.1.4 Software Interfaces
+- .NET Framework
+- SQL Server
+- GitHub
+- Visual Studio Code
 
-### 3.4 Logical Database Requirements
-* **Instruction:** Describe the data entities managed by your module. If you are using a shared database, specify which tables your team is responsible for. (Include ERD models in the Appendix).
+### 2.1.5 Communications Interfaces
+- HTTP/REST APIs
+- HTTPS secure communication
 
-### 3.5 Software System Attributes
-* **Instruction:** Define the Non-Functional Requirements (NFRs) for your module:
-  * **Reliability:** [Acceptable failure rates].
-  * **Security:** [Authentication methods, data encryption protocols].
-  * **Maintainability & Portability:** [Coding standards, documentation rules].
+### 2.1.6 Memory & Operational Constraints
+- Minimum RAM: 8 GB
+- Stable internet connection required
+- Windows operating system recommended
 
 ---
 
-## 4. Appendices
-### Appendix A: Glossary & Models
-* **Instruction:** Include any Data Flow Diagrams (DFDs), Entity-Relationship Diagrams (ERDs), or detailed UI Mockups here.
+## 2.2 Product Functions
 
-### Appendix B: GitHub Traceability Checklist
-* **Instruction for Team Members:** Before submitting this SRS, ensure that:
-  * [ ] Every User Story in Section 3.2 has a corresponding GitHub Issue.
-  * [ ] Every GitHub Issue has an appropriate label (e.g., `enhancement`, `requirement`).
-  * [ ] Pull Requests reference the Issue IDs (e.g., `Closes #12`). 
+- Invoice generation
+- Payment processing
+- Insurance verification
+- Revenue tracking
+- Billing reports
+- Financial transaction logging
+
+---
+
+## 2.3 User Characteristics
+
+| User | Description |
+|---|---|
+| Receptionist | Creates invoices and receives payments |
+| Accountant | Reviews billing transactions |
+| Laboratory Staff | Checks payment status before approving results |
+| Administrator | Manages billing settings |
+
+---
+
+## 2.4 Constraints, Assumptions, and Dependencies
+
+- The module depends on APIs provided by the Integration Team.
+- Development uses C# and .NET technologies.
+- Financial data must comply with security and privacy standards.
+
+---
+
+# 3. Specific Requirements (Agile Approach)
+
+## 3.1 External Interface Requirements
+The module communicates with other systems using REST APIs and JSON data formats.
+
+---
+
+## 3.2 System Features & User Stories
+
+### 3.2.1 Feature: Invoice Management
+
+Description:
+Handles invoice creation and billing operations.
+
+Priority: High
+
+#### User Stories
+
+Story 1:
+As a Receptionist, I want to create invoices so that patients can complete payment before receiving services.
+
+Acceptance Criteria:
+- Invoice contains patient details
+- Invoice total is calculated automatically
+- Invoice is saved successfully
+
+GitHub Issue: #1
+
+---
+
+### 3.2.2 Feature: Payment Processing
+
+Description:
+Processes and records payments.
+
+Priority: High
+
+#### User Stories
+
+Story 1:
+As a Receptionist, I want to process payments so that transactions are completed successfully.
+
+Acceptance Criteria:
+- Payment records are stored
+- Payment confirmation is generated
+- Payment status updates automatically
+
+GitHub Issue: #2
+
+---
+
+### 3.2.3 Feature: Insurance Validation
+
+Description:
+Validates insurance coverage before payment approval.
+
+Priority: High
+
+#### User Stories
+
+Story 1:
+As a Receptionist, I want to verify insurance coverage so that patients are billed correctly.
+
+Acceptance Criteria:
+- Insurance status is displayed
+- Rejected requests are flagged
+- Approved coverage updates invoice totals
+
+GitHub Issue: #3
+
+---
+
+### 3.2.4 Feature: Billing Reports
+
+Description:
+Generates financial and billing reports.
+
+Priority: Medium
+
+#### User Stories
+
+Story 1:
+As an Accountant, I want to generate billing reports so that I can track financial activity.
+
+Acceptance Criteria:
+- Reports display total revenue
+- Reports can be filtered by date
+- Reports are exportable
+
+GitHub Issue: #4
+
+---
+
+# 3.3 Performance Requirements
+
+- Invoice requests must be processed within 2 seconds.
+- The system must support at least 50 concurrent users.
+- Payment transactions must be recorded without data loss.
+
+---
+
+# 3.4 Logical Database Requirements
+
+## Main Entities
+- Patient
+- Sample
+- Test
+- Invoice
+- Invoice_Item
+- Payment
+- Insurance_Coverage
+- Billing_Transaction
+
+The Revenue & Billing team is responsible for billing-related database tables and relationships.
+
+---
+
+# 3.5 Software System Attributes
+
+## Reliability
+The system must maintain accurate financial records with minimal downtime.
+
+## Security
+- User authentication required
+- Sensitive data must be encrypted
+- HTTPS communication required
+
+## Maintainability & Portability
+- Code must follow C# coding standards
+- Documentation must be maintained
+- System should support future scalability
+
+---
+
+# 4. Appendices
+
+## Appendix A: Glossary & Models
+
+This appendix includes:
+- ERD diagrams
+- Class diagrams
+- Wireframes
+- Database models
+
+---
+
+## Appendix B: GitHub Traceability Checklist
+
+- Every User Story has a corresponding GitHub Issue.
+- Every GitHub Issue includes labels.
+- Pull Requests reference Issue IDs.
