@@ -15,7 +15,7 @@ Provide a brief description of what this module does based on the project text. 
 | Member Name | Primary Responsibility | Assigned Tasks (Examples) | GitHub Profile |
 | :--- | :--- | :--- | :--- |
 | **هدى السلوم المحمد (Leader)** | Integration & Architecture | Component Diagrams, API Specs, Team Coordination | [[Link](https://github.com/huda05alsalloum-crypto)] |
-| **نور الهدى شحود** | Requirements & Analysis | Functional Requirements, Use Case Diagrams | [[Link](https://github.com/NourAlHudaShahood)] |
+| **نور الهدى شحود** | Requirements & Analysis | Use Case و Activity Diagrams| [[Link](https://github.com/NourAlHudaShahood)] |
 | **Student 3** | Process Modeling | Activity Diagrams, Business Rules Validation | [Link] |
 | **Student 4** | Data Design | ERD, Database Schema, Class Diagrams | [Link] |
 | **Student 5 (Optional)** | Interaction Design | Sequence Diagrams, Logic Flow | [Link] |
