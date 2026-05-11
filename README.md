@@ -16,8 +16,8 @@ Provide a brief description of what this module does based on the project text. 
 | :--- | :--- | :--- | :--- |
 | **هدى السلوم المحمد (Leader)** | Integration & Architecture | Component Diagrams, API Specs, Team Coordination | [[Link](https://github.com/huda05alsalloum-crypto)] |
 | **نور الهدى شحود** | Requirements & Analysis | Use Case و Activity Diagrams| [[Link](https://github.com/NourAlHudaShahood)] |
-| **مريم محمد** | Process Modeling |ERD و Class Diagrams| [https://github.com/Mariam-Mohammad] |
-| **Student 4** | Data Design | ERD, Database Schema, Class Diagrams | [Link] |
+| **مريم محمد** | Process Modeling |ERD و Class Diagrams| [[link](https://github.com/Mariam-Mohammad)] |
+| **اية المغربل** | Data Design | Sequence Diagrams | [Link](https://github.com/ayosh)k] |
 | **Student 5 (Optional)** | Interaction Design | Sequence Diagrams, Logic Flow | [Link] |
 | **Student 6 (Optional)** | UI/UX & Frontend | Wireframes, Interface Logic, User Stories | [Link] |
 
