@@ -4,7 +4,7 @@
 MediChain Laboratory Management System
 
 ## Module/Subsystem:
-Revenue & Billing Module (REV-BIL)
+ (REV-BIL)
 
 ## Version:
 1.0
