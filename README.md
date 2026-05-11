@@ -1,6 +1,6 @@
 ﻿# Module Name: [e.g., Surgery Optimization System]
-## Project: [Hospital ERP / MediChain]
-**Module Code:** [e.g., SURG-05]
+## Project: MediChain Laboratory Management System
+**Module Code:** REV-BIL
 
 ---
 
@@ -14,7 +14,7 @@ Provide a brief description of what this module does based on the project text. 
 
 | Member Name | Primary Responsibility | Assigned Tasks (Examples) | GitHub Profile |
 | :--- | :--- | :--- | :--- |
-| **Student 1 (Leader)** | Integration & Architecture | Component Diagrams, API Specs, Team Coordination | [Link] |
+| **هدى السلوم المحمد (Leader)** | Integration & Architecture | Component Diagrams, API Specs, Team Coordination | [[Link](https://github.com/huda05alsalloum-crypto)] |
 | **Student 2** | Requirements & Analysis | Functional Requirements, Use Case Diagrams | [Link] |
 | **Student 3** | Process Modeling | Activity Diagrams, Business Rules Validation | [Link] |
 | **Student 4** | Data Design | ERD, Database Schema, Class Diagrams | [Link] |
