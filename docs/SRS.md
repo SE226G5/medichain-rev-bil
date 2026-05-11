@@ -122,7 +122,37 @@ The module uses responsive web interfaces following the shared MediChain design 
 
 ---
 
+# Functional Requirements (FRs)
+
+- FR1: The system shall generate invoices automatically for laboratory services.
+- FR2: The system shall calculate invoice totals automatically.
+- FR3: The system shall process payments securely.
+- FR4: The system shall support multiple payment methods.
+- FR5: The system shall validate insurance coverage before payment approval.
+- FR6: The system shall apply insurance discounts automatically.
+- FR7: The system shall record all financial transactions.
+- FR8: The system shall generate billing and revenue reports.
+- FR9: The system shall update invoice status after successful payment.
+- FR10: The system shall prevent laboratory result approval before payment completion.
+
+---
+
+# Non-Functional Requirements (NFRs)
+
+- NFR1: The system must respond within 2 seconds.
+- NFR2: The system must support at least 50 concurrent users.
+- NFR3: Financial data must be encrypted during transmission.
+- NFR4: The system must require secure user authentication.
+- NFR5: The system must maintain high availability during working hours.
+- NFR6: The system must provide reliable transaction logging.
+- NFR7: The system must support future scalability and integration.
+- NFR8: The system must follow coding and documentation standards.
+
+---
+
 # 3. Specific Requirements (Agile Approach)
+
+The module follows Agile development methodology.
 
 ## 3.1 External Interface Requirements
 The module communicates with other systems using REST APIs and JSON data formats.
@@ -263,6 +293,9 @@ The system must maintain accurate financial records with minimal downtime.
 This appendix includes:
 - ERD diagrams
 - Class diagrams
+- Use Case diagrams
+- Activity diagrams
+- Sequence diagrams
 - Wireframes
 - Database models
 
