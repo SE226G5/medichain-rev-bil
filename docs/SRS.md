@@ -4,7 +4,7 @@
 MediChain Laboratory Management System
 
 ## Module/Subsystem:
- (REV-BIL)
+Revenue & Billing Module (REV-BIL)
 
 ## Version:
 1.0
@@ -159,16 +159,16 @@ The module communicates with other systems using REST APIs and JSON data formats
 
 ---
 
-## 3.2 System Features & User Stories
+# 3.2 System Features & User Stories
 
-### 3.2.1 Feature: Invoice Management
+## 3.2.1 Feature: Create and Manage Invoices
 
 Description:
 Handles invoice creation and billing operations.
 
 Priority: High
 
-#### User Stories
+### User Stories
 
 Story 1:
 As a Receptionist, I want to create invoices so that patients can complete payment before receiving services.
@@ -182,14 +182,14 @@ GitHub Issue: #1
 
 ---
 
-### 3.2.2 Feature: Payment Processing
+## 3.2.2 Feature: Process Patient Payments
 
 Description:
 Processes and records payments.
 
 Priority: High
 
-#### User Stories
+### User Stories
 
 Story 1:
 As a Receptionist, I want to process payments so that transactions are completed successfully.
@@ -203,14 +203,14 @@ GitHub Issue: #2
 
 ---
 
-### 3.2.3 Feature: Insurance Validation
+## 3.2.3 Feature: Verify Insurance Coverage Before Payment
 
 Description:
 Validates insurance coverage before payment approval.
 
 Priority: High
 
-#### User Stories
+### User Stories
 
 Story 1:
 As a Receptionist, I want to verify insurance coverage so that patients are billed correctly.
@@ -224,24 +224,108 @@ GitHub Issue: #3
 
 ---
 
-### 3.2.4 Feature: Billing Reports
+## 3.2.4 Feature: View Financial Logs
 
 Description:
-Generates financial and billing reports.
+Displays billing transaction history and financial logs.
 
 Priority: Medium
 
-#### User Stories
+### User Stories
 
 Story 1:
-As an Accountant, I want to generate billing reports so that I can track financial activity.
+As an Accountant, I want to view financial logs so that I can monitor billing transactions.
+
+Acceptance Criteria:
+- Logs display transaction details
+- Logs can be filtered by date
+- Logs cannot be deleted
+
+GitHub Issue: #4
+
+---
+
+## 3.2.5 Feature: Check Payment Status Before Result Entry
+
+Description:
+Verifies payment completion before allowing laboratory result entry.
+
+Priority: High
+
+### User Stories
+
+Story 1:
+As a Laboratory Staff member, I want to check payment status before entering results so that unpaid samples cannot proceed.
+
+Acceptance Criteria:
+- Payment status is displayed
+- Result fields are disabled for unpaid samples
+- Warning message appears for unpaid invoices
+
+GitHub Issue: #5
+
+---
+
+## 3.2.6 Feature: Record Financial Transactions
+
+Description:
+Stores all billing-related financial transactions for auditing purposes.
+
+Priority: High
+
+### User Stories
+
+Story 1:
+As a System, I want to record financial transactions so that all billing activities are traceable.
+
+Acceptance Criteria:
+- Transactions are logged automatically
+- Logs are linked to patients and invoices
+- Records cannot be deleted
+
+GitHub Issue: #6
+
+---
+
+## 3.2.7 Feature: Approve Results for Paid Samples Only
+
+Description:
+Allows laboratory result approval only after successful payment.
+
+Priority: High
+
+### User Stories
+
+Story 1:
+As a Laboratory Staff member, I want to approve results only for paid samples so that laboratory policies are enforced.
+
+Acceptance Criteria:
+- Approval is blocked for unpaid samples
+- Paid samples can be approved successfully
+- Payment status is verified before approval
+
+GitHub Issue: #7
+
+---
+
+## 3.2.8 Feature: Generate Billing Reports
+
+Description:
+Generates billing and revenue reports for accountants.
+
+Priority: Medium
+
+### User Stories
+
+Story 1:
+As an Accountant, I want to generate billing reports so that I can monitor financial performance.
 
 Acceptance Criteria:
 - Reports display total revenue
 - Reports can be filtered by date
-- Reports are exportable
+- Reports can be exported
 
-GitHub Issue: #4
+GitHub Issue: #8
 
 ---
 
