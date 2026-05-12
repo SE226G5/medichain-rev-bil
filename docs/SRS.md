@@ -17,17 +17,19 @@ Revenue & Billing Module (REV-BIL)
 # 1. Introduction
 
 ## 1.1 Purpose
-This document defines the requirements for the Revenue & Billing module within the MediChain Laboratory Management System. The module manages invoices, payments, insurance validation, and financial transaction tracking.
+This document defines the requirements for the Revenue & Billing module within the MediChain Laboratory Management System. The module manages invoices, payments, insurance validation, billing reports, financial transaction tracking, and payment verification before laboratory result approval.
 
 ## 1.2 Scope
 
 ### The system will:
-- Create invoices
+- Create and manage invoices
 - Process payments
 - Validate insurance coverage
 - Generate billing reports
-- Track financial transactions
-- Prevent result approval before payment
+- Record financial transactions
+- Display financial logs
+- Check payment status before result entry
+- Approve results only for paid samples
 
 ### The system will NOT:
 - Perform laboratory analysis
@@ -53,14 +55,14 @@ This document defines the requirements for the Revenue & Billing module within t
 - Shared API Contracts
 
 ## 1.5 Overview
-This document describes the overall system requirements, interfaces, user stories, database requirements, and non-functional requirements related to the Revenue & Billing module.
+This document describes the system requirements, interfaces, database requirements, diagrams, and user stories related to the Revenue & Billing module.
 
 ---
 
 # 2. Overall Description
 
 ## 2.1 Product Perspective
-The Revenue & Billing module is part of the MediChain Laboratory Management System. It interacts with laboratory services, patient management, and insurance systems using shared APIs and a centralized database.
+The Revenue & Billing module is a subsystem of the MediChain Laboratory Management System. It integrates with laboratory services, patient management, insurance systems, and payment services using shared APIs and a centralized database.
 
 ### 2.1.1 System Interfaces
 - Insurance Validation API
@@ -69,7 +71,7 @@ The Revenue & Billing module is part of the MediChain Laboratory Management Syst
 - Laboratory Result System
 
 ### 2.1.2 User Interfaces
-The module uses responsive web interfaces following the shared MediChain design system.
+The module uses responsive web interfaces following the MediChain shared design system.
 
 ### 2.1.3 Hardware Interfaces
 - Receipt printers
@@ -94,12 +96,14 @@ The module uses responsive web interfaces following the shared MediChain design 
 
 ## 2.2 Product Functions
 
-- Invoice generation
+- Invoice management
 - Payment processing
-- Insurance verification
-- Revenue tracking
-- Billing reports
-- Financial transaction logging
+- Insurance validation
+- Financial transaction recording
+- Billing report generation
+- Financial log viewing
+- Payment verification before result entry
+- Approval restriction for unpaid samples
 
 ---
 
@@ -107,9 +111,9 @@ The module uses responsive web interfaces following the shared MediChain design 
 
 | User | Description |
 |---|---|
-| Receptionist | Creates invoices and receives payments |
-| Accountant | Reviews billing transactions |
-| Laboratory Staff | Checks payment status before approving results |
+| Receptionist | Creates invoices and processes payments |
+| Accountant | Generates billing reports and views financial logs |
+| Laboratory Staff | Checks payment status and approves results |
 | Administrator | Manages billing settings |
 
 ---
@@ -118,22 +122,22 @@ The module uses responsive web interfaces following the shared MediChain design 
 
 - The module depends on APIs provided by the Integration Team.
 - Development uses C# and .NET technologies.
-- Financial data must comply with security and privacy standards.
+- Financial data must comply with privacy and security standards.
 
 ---
 
 # Functional Requirements (FRs)
 
-- FR1: The system shall generate invoices automatically for laboratory services.
+- FR1: The system shall create and manage invoices.
 - FR2: The system shall calculate invoice totals automatically.
 - FR3: The system shall process payments securely.
 - FR4: The system shall support multiple payment methods.
 - FR5: The system shall validate insurance coverage before payment approval.
-- FR6: The system shall apply insurance discounts automatically.
+- FR6: The system shall generate billing reports.
 - FR7: The system shall record all financial transactions.
-- FR8: The system shall generate billing and revenue reports.
-- FR9: The system shall update invoice status after successful payment.
-- FR10: The system shall prevent laboratory result approval before payment completion.
+- FR8: The system shall display financial logs.
+- FR9: The system shall check payment status before result entry.
+- FR10: The system shall prevent result approval before payment completion.
 
 ---
 
@@ -145,7 +149,7 @@ The module uses responsive web interfaces following the shared MediChain design 
 - NFR4: The system must require secure user authentication.
 - NFR5: The system must maintain high availability during working hours.
 - NFR6: The system must provide reliable transaction logging.
-- NFR7: The system must support future scalability and integration.
+- NFR7: The system must support scalability and integration.
 - NFR8: The system must follow coding and documentation standards.
 
 ---
@@ -155,93 +159,91 @@ The module uses responsive web interfaces following the shared MediChain design 
 The module follows Agile development methodology.
 
 ## 3.1 External Interface Requirements
-The module communicates with other systems using REST APIs and JSON data formats.
+The module communicates with external systems using REST APIs and JSON data formats.
 
 ---
 
 # 3.2 System Features & User Stories
 
-## 3.2.1 Feature: Create and Manage Invoices
+---
+
+## 3.2.1 Feature: Invoice Management
 
 Description:
 Handles invoice creation and billing operations.
 
 Priority: High
 
-### User Stories
-
-Story 1:
+### User Story
 As a Receptionist, I want to create invoices so that patients can complete payment before receiving services.
 
-Acceptance Criteria:
+### Acceptance Criteria
 - Invoice contains patient details
 - Invoice total is calculated automatically
 - Invoice is saved successfully
 
-GitHub Issue: #1
+### GitHub Issue
+#1 – Invoice Management
 
 ---
 
-## 3.2.2 Feature: Process Patient Payments
+## 3.2.2 Feature: Payment Processing
 
 Description:
 Processes and records payments.
 
 Priority: High
 
-### User Stories
-
-Story 1:
+### User Story
 As a Receptionist, I want to process payments so that transactions are completed successfully.
 
-Acceptance Criteria:
+### Acceptance Criteria
 - Payment records are stored
 - Payment confirmation is generated
 - Payment status updates automatically
 
-GitHub Issue: #2
+### GitHub Issue
+#2 – Payment Processing
 
 ---
 
-## 3.2.3 Feature: Verify Insurance Coverage Before Payment
+## 3.2.3 Feature: Insurance Validation
 
 Description:
 Validates insurance coverage before payment approval.
 
 Priority: High
 
-### User Stories
+### User Story
+As a Receptionist, I want to validate insurance coverage so that patients are billed correctly.
 
-Story 1:
-As a Receptionist, I want to verify insurance coverage so that patients are billed correctly.
-
-Acceptance Criteria:
+### Acceptance Criteria
 - Insurance status is displayed
 - Rejected requests are flagged
 - Approved coverage updates invoice totals
 
-GitHub Issue: #3
+### GitHub Issue
+#3 – Insurance Validation
 
 ---
 
 ## 3.2.4 Feature: View Financial Logs
 
 Description:
-Displays billing transaction history and financial logs.
+Displays financial transaction history and logs.
 
 Priority: Medium
 
-### User Stories
+### User Story
+As an Accountant, I want to view financial logs so that I can track all billing activities.
 
-Story 1:
-As an Accountant, I want to view financial logs so that I can monitor billing transactions.
-
-Acceptance Criteria:
-- Logs display transaction details
+### Acceptance Criteria
+- Financial logs are displayed in a table
+- Logs include payment and invoice details
 - Logs can be filtered by date
-- Logs cannot be deleted
 
-GitHub Issue: #4
+### GitHub Issue
+#4 – View Financial Logs
 
 ---
 
@@ -252,38 +254,36 @@ Verifies payment completion before allowing laboratory result entry.
 
 Priority: High
 
-### User Stories
+### User Story
+As a Laboratory Staff member, I want to check payment status before entering results so that unpaid samples cannot be processed.
 
-Story 1:
-As a Laboratory Staff member, I want to check payment status before entering results so that unpaid samples cannot proceed.
+### Acceptance Criteria
+- Payment status is retrieved successfully
+- Result entry is disabled for unpaid samples
+- Warning message is displayed if payment is incomplete
 
-Acceptance Criteria:
-- Payment status is displayed
-- Result fields are disabled for unpaid samples
-- Warning message appears for unpaid invoices
-
-GitHub Issue: #5
+### GitHub Issue
+#5 – Check Payment Status Before Result Entry
 
 ---
 
 ## 3.2.6 Feature: Record Financial Transactions
 
 Description:
-Stores all billing-related financial transactions for auditing purposes.
+Stores all billing-related financial activities for auditing purposes.
 
 Priority: High
 
-### User Stories
+### User Story
+As a System, I want to record financial transactions so that all payment activities are traceable.
 
-Story 1:
-As a System, I want to record financial transactions so that all billing activities are traceable.
+### Acceptance Criteria
+- Transactions are stored automatically
+- Each transaction links to invoice and patient data
+- Financial logs cannot be deleted
 
-Acceptance Criteria:
-- Transactions are logged automatically
-- Logs are linked to patients and invoices
-- Records cannot be deleted
-
-GitHub Issue: #6
+### GitHub Issue
+#6 – Record Financial Transactions
 
 ---
 
@@ -294,38 +294,36 @@ Allows laboratory result approval only after successful payment.
 
 Priority: High
 
-### User Stories
+### User Story
+As a Laboratory Staff member, I want to approve results only for paid samples so that unpaid services are restricted.
 
-Story 1:
-As a Laboratory Staff member, I want to approve results only for paid samples so that laboratory policies are enforced.
-
-Acceptance Criteria:
-- Approval is blocked for unpaid samples
+### Acceptance Criteria
+- Result approval button is disabled for unpaid samples
 - Paid samples can be approved successfully
-- Payment status is verified before approval
+- Approval status is saved
 
-GitHub Issue: #7
+### GitHub Issue
+#7 – Approve Results for Paid Samples Only
 
 ---
 
 ## 3.2.8 Feature: Generate Billing Reports
 
 Description:
-Generates billing and revenue reports for accountants.
+Generates revenue and billing reports.
 
 Priority: Medium
 
-### User Stories
-
-Story 1:
+### User Story
 As an Accountant, I want to generate billing reports so that I can monitor financial performance.
 
-Acceptance Criteria:
+### Acceptance Criteria
 - Reports display total revenue
 - Reports can be filtered by date
 - Reports can be exported
 
-GitHub Issue: #8
+### GitHub Issue
+#8 – Generate Billing Reports
 
 ---
 
@@ -347,9 +345,9 @@ GitHub Issue: #8
 - Invoice_Item
 - Payment
 - Insurance_Coverage
-- Billing_Transaction
+- Financial_Log
 
-The Revenue & Billing team is responsible for billing-related database tables and relationships.
+The Revenue & Billing team is responsible for billing-related tables and relationships.
 
 ---
 
