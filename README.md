@@ -18,17 +18,17 @@ Provide a brief description of what this module does based on the project text. 
 | **نور الهدى شحود** | Requirements & Analysis | Use Case و Activity Diagrams| [[Link](https://github.com/NourAlHudaShahood)] |
 | **مريم محمد** | Process Modeling |ERD و Class Diagrams| [[link](https://github.com/Mariam-Mohammad)] |
 | **اية المغربل** | Data Design | Sequence Diagrams | [Link](https://github.com/ayosh)k] |
-| **هيفاء عالية حموي** | Interaction Design )| Sequence Diagrams, Logic Flow | [[Link](https://github.com/haifaahamwi)]|
+| **هيفاء عالية حموي** | UI/UX & Frontend | Wireframes, Interface Logic, User Stories| [[Link](https://github.com/haifaahamwi)]|
 | **Student 6 (Optional)** | UI/UX & Frontend | Wireframes, Interface Logic, User Stories | [Link] |
 
 ---
 
 ## 🚀 Analysis & Design Progress
-- [X ] **Requirement Elicitation:** Completed list of FRs/NFRs.
-- [X ] **UML Behavioral Diagrams:** Use Case and Activity Diagrams.
-- [ X] **UML Structural Diagrams:** ERD and Class Diagrams.
-- [X ] **Dynamic Modeling:** Sequence Diagrams for core processes.
-- [ ] **Interface Design:** Low-fidelity Wireframes.
+- [X] **Requirement Elicitation:** Completed list of FRs/NFRs.
+- [X] **UML Behavioral Diagrams:** Use Case and Activity Diagrams.
+- [X] **UML Structural Diagrams:** ERD and Class Diagrams.
+- [X] **Dynamic Modeling:** Sequence Diagrams for core processes.
+- [x] **Interface Design:** Low-fidelity Wireframes.
 
 ---
 
