@@ -1,4 +1,4 @@
-﻿# Module Name: [e.g., Surgery Optimization System]
+# Module Name: [e.g., Surgery Optimization System]
 ## Project: MediChain Laboratory Management System
 **Module Code:** REV-BIL
 
@@ -14,12 +14,11 @@ Provide a brief description of what this module does based on the project text. 
 
 | Member Name | Primary Responsibility | Assigned Tasks (Examples) | GitHub Profile |
 | :--- | :--- | :--- | :--- |
-| **هدى السلوم المحمد (Leader)** | Integration & Architecture | Component Diagrams, API Specs, Team Coordination | [[Link](https://github.com/huda05alsalloum-crypto)] |
-| **نور الهدى شحود** | Requirements & Analysis | Use Case و Activity Diagrams| [[Link](https://github.com/NourAlHudaShahood)] |
-| **مريم محمد** | UML Structural Diagrams |ERD و Class Diagrams| [[link](https://github.com/Mariam-Mohammad)] |
-| **اية المغربل** | Data Design | Sequence Diagrams | [Link](https://github.com/ayosh)k] |
-| **هيفاء عالية حموي** | UI/UX & Frontend | Wireframes, Interface Logic, User Stories| [[Link](https://github.com/haifaahamwi)]|
-| **Student 6 (Optional)** | UI/UX & Frontend | Wireframes, Interface Logic, User Stories | [Link] |
+| **هدى السلوم المحمد (Leader)** | Requirement Elicitation | Collecting Functional Requirements (FRs) and Non-Functional Requirements (NFRs), Team Coordination | [[Link](https://github.com/huda05alsalloum-crypto)] |
+| **نور الهدى شحود** | UML Behavioral Diagrams | Use Case Diagrams, Activity Diagrams | [[Link](https://github.com/NourAlHudaShahood)] |
+| **مريم محمد** | UML Structural Diagrams | ERD, Class Diagrams | [[Link](https://github.com/Mariam-Mohammad)] |
+| **اية المغربل** | Dynamic Modeling | Sequence Diagrams | [[Link](https://github.com/ayosh)] |
+| **هيفاء عالية حموي** | Interface Design | Wireframes, Interface Design | [[Link](https://github.com/haifaahamwi)] |
 
 ---
 
@@ -38,6 +37,7 @@ Provide a brief description of what this module does based on the project text. 
 * **Outbound:** Data sent to [Module Name].
 
 ---
+
 ## 🛠 Tools Used
 * **Modeling:** e.g., StarUML / Lucidchart.
 * **Documentation:** Markdown / LaTeX.
