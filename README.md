@@ -33,8 +33,10 @@ Provide a brief description of what this module does based on the project text. 
 
 ## 🔗 Integration Points
 *How this module communicates with others:*
-* **Inbound:** Data received from [Module Name].
-* **Outbound:** Data sent to [Module Name].
+How this module communicates with others:
+
+* **Inbound:** Data received from `Module 6: LAB-TRK` (Patient Type, Required Lab Tests, and Sample ID).
+* **Outbound:** Payment and Billing status sent back to `Module 6: LAB-TRK` (To approve or block releasing the test results based on payment).
 
 ---
 
