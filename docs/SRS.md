@@ -143,14 +143,18 @@ The module uses responsive web interfaces following the MediChain shared design 
 
 # Non-Functional Requirements (NFRs)
 
-- NFR1: The system must respond within 2 seconds.
-- NFR2: The system must support at least 50 concurrent users.
-- NFR3: Financial data must be encrypted during transmission.
-- NFR4: The system must require secure user authentication.
-- NFR5: The system must maintain high availability during working hours.
-- NFR6: The system must provide reliable transaction logging.
-- NFR7: The system must support scalability and integration.
-- NFR8: The system must follow coding and documentation standards.
+
+### 1. Security & Compliance (SEC)
+* **NFR-SEC-1:** All financial transactions, invoices, and billing logs must be encrypted both in transit (using HTTPS/TLS 1.3) and at rest.
+* **NFR-SEC-2:** Role-Based Access Control (RBAC) must be enforced; only authorized billing staff can modify pricing data, while lab technicians have read-only access to payment status.
+
+### 2. Data Integrity & Audit Trails (AUD)
+* **NFR-AUD-1:** The system must maintain an immutable audit log for every transaction change (Approved, Rejected, Overridden by Insurance) linked immutably to `Patient ID` and `Sample ID`.
+* **NFR-AUD-2:** No financial transaction record can be hard-deleted from the database; soft-deletes must be implemented for regulatory compliance.
+
+### 3. Availability & Performance (PER)
+* **NFR-PER-1:** The billing status verification API must respond within less than $200\text{ ms}$ to prevent any latency or delays in the `LAB-TRK` (Sample Tracking) workflow.
+* **NFR-PER-2:** The system must maintain $99.9\%$ uptime during core laboratory operational hours.
 
 ---
 
