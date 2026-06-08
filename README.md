@@ -23,6 +23,11 @@ The **Revenue & Billing (REV-BIL)** module is responsible for managing the finan
 
 ## 🚀 Analysis & Design Progress
 - [X] **Requirement Elicitation:** Completed list of FRs/NFRs.
+- [ ] ### 📋 Detailed Functional Requirements (FRs)
+* **FR-1 (Dynamic Pricing):** The system must apply different billing rates and prices depending on the `Patient Type` (VIP Priority, Standard Paid, etc.).
+* **FR-2 (Access Control & Hard Stops):** The system must block entering or approving lab test results if `Payment Status` is unverified or missing insurance coverage.
+* **FR-3 (Payment Rejection Routing):** In case of a rejected payment, the system must automatically route the workflow to "Direct Payment" or suspend the process until resolved.
+* **FR-4 (Financial Auditing & Binding):** The system must securely log all financial transactions and bind them directly to both the `Sample ID` and `Patient ID`.
 - [X] **UML Behavioral Diagrams:** Use Case and Activity Diagrams.
 - [X] **UML Structural Diagrams:** ERD and Class Diagrams.
 - [X] **Dynamic Modeling:** Sequence Diagrams for core processes.
@@ -40,6 +45,7 @@ How this module communicates with others:
 ---
 
 ## 🛠 Tools Used
-* **Modeling:** e.g., StarUML / Lucidchart.
-* **Documentation:** Markdown / LaTeX.
+## 🛠 Tools Used
+* **Modeling:** StarUML / Lucidchart.
+* **Documentation:** Markdown / Microsoft Word.
 * **Version Control:** GitHub.
